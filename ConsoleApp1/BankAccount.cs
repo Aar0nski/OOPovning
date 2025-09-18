@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ConsoleApp1;
+using System;
 
 namespace ConsoleApp1
 {
-    // Skapar en klass 
-    public class BankAccount 
+    public class BankAccount : Account // Ärver från Account
     {
-        // Egenskapaper för kontonummer och saldo
-        public string AccountNumber { get; set; } 
-        public double Balance { get; set; }
-        // En metod som skriver ut kontoinformation 
-        public void PrintAccountInfo() 
+        public BankAccount(string accountNumber, double initialBalance)
+            : base(accountNumber, initialBalance) { } // Anropar basklassens konstruktor
+
+        public override void PrintAccountInfo() // Skriver ut kontoinformation
         {
-            Console.WriteLine($"Account: {AccountNumber}, Balance: {Balance}");
-        } 
-    } 
+            Console.WriteLine($"Konto: {AccountNumber}, Saldo: {balance}");
+        }
+    }
 }
