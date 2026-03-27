@@ -17,5 +17,11 @@ namespace ConsoleApp1
         {
             Console.WriteLine($"Account: {AccountNumber}, Balance: {Balance}");
         } 
+
+        public BankAccount(string accountNumber, double initialBalance)
+        {
+            AccountNumber = accountNumber;
+            Balance = initialBalance;
+        }
     } 
 }
